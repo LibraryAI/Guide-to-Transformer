@@ -13,17 +13,17 @@ Attention 계열 논문 중 question answering 과 맥락 추측 등 natrual lan
 ### Part1. Byte-Pair Encoding
 - __Create BPE pair set__: 데이터셋에서, byte-pair encoding pair set 을 생성<br>
   - Hyperparameter : 40,000 ; 40,000 개의 pair 유지<br>
-  - 자세한 개념과 코드 설명은 [여기](https://github.com/LibraryAI/NLP/blob/master/make_BPE.ipynb) <br></br>
+  - [자세한 개념과 코드 설명](https://github.com/LibraryAI/NLP/blob/master/make_BPE.ipynb) <br></br>
 
 ### Part2. Text and Position Embedding
 - __Apply BPE pair tokenization__
   - Batch data에 BPE 를 수행해 BPE pair Tokenization 
-  - 자세한 개념과 코드 설명은 [여기](https://github.com/LibraryAI/NLP/blob/master/apply_BPE.ipynb) <br>
+  - [자세한 개념과 코드 설명](https://github.com/LibraryAI/NLP/blob/master/apply_BPE.ipynb) <br>
 - __Positional encoding and Word embedding__
   - Fixed Sine, Cosine embedding func applied without training. Same dimension as the embedding (256) and is added to the embedding. 벡터 합. 사이즈 변화 X
   - BPE Tokenized Data를 Word Embedding
   - Hyperparameter : 256 ; 256 dim embedding vector space 
-  - 자세한 개념과 코드 설명은 [여기](https://github.com/LibraryAI/NLP/blob/master/about_WE_and_PE.ipynb)<br></br>
+  - [자세한 개념과 코드 설명](https://github.com/LibraryAI/NLP/blob/master/about_WE_and_PE.ipynb)<br></br>
   
 ### Part3. Multilayer Transformer Decoder
 - __Self attention__
@@ -39,7 +39,7 @@ Attention 계열 논문 중 question answering 과 맥락 추측 등 natrual lan
     - Multiply Value matrix by Softmax outcome, outcome is the weighted value of words in the sentence by the specific word
   - __Attention__
     - Sum all the weighted values (as Z)
-  - 자세한 개념과 코드 설명은 [여기](https://github.com/LibraryAI/NLP/blob/master/about_transformer_self_attention.ipynb)
+  - [자세한 개념과 코드 설명](https://github.com/LibraryAI/NLP/blob/master/about_transformer_self_attention.ipynb)
 - __Multi-headed self attention__
   - __Multiple matrices__
     - Create multiple number of different self attention matrices
@@ -48,7 +48,7 @@ Attention 계열 논문 중 question answering 과 맥락 추측 등 natrual lan
     - Concatenate Z1, Z2, Z3, .. Zn in row. (Z: M by n*T size matrix)
   - __Weight All__
     - Multiply concatenated Z with Weight matrix W of n*T by N, Z × W = Z is back again with M by N size
-  - 자세한 개념과 코드 설명은 [여기](https://github.com/LibraryAI/NLP/blob/master/about_transformer_self_attention.ipynb)
+  - [자세한 개념과 코드 설명](https://github.com/LibraryAI/NLP/blob/master/about_transformer_self_attention.ipynb)
 - __Masked multi-headed self attention__
   - __Masking future time step scores__
     - Self attention의 세번째 step의 softmax를 적용하기 전에 해당 word의 future time step 에 해당하는 word vector들의 score -inf 로 바꿔주기
