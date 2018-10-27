@@ -19,11 +19,10 @@ Attention 계열 논문 중 question answering 과 맥락 추측 등 natrual lan
 - __Apply BPE pair tokenization__
   - Batch data에 BPE 를 수행해 BPE pair Tokenization 
   - 자세한 개념과 코드 설명은 [여기](https://github.com/LibraryAI/NLP/blob/master/apply_BPE.ipynb) <br>
-- __Word embedding__
+- __Positional encoding and Word embedding__
+  - Fixed Sine, Cosine embedding func applied without training. Same dimension as the embedding (256) and is added to the embedding. 벡터 합. 사이즈 변화 X
   - BPE Tokenized Data를 Word Embedding
-  - Hyperparameter : 256 ; 256 dim embedding vector space
-- __Position embedding__
-  - Fixed Sine, Cosine embedding func applied without training. Same dimension as the embedding (256) and is added to the embedding. 벡터 합. 사이즈 변화 X<br></br>
+  - Hyperparameter : 256 ; 256 dim embedding vector space <br></br>
   
 ### Part3. Multilayer Transformer Decoder
 - __Self attention__
