@@ -39,6 +39,7 @@ Attention 계열 논문 중 question answering 과 맥락 추측 등 natrual lan
     - Multiply Value matrix by Softmax outcome, outcome is the weighted value of words in the sentence by the specific word
   - __Attention__
     - Sum all the weighted values (as Z)
+  - 자세한 개념과 코드 설명은 [여기](https://github.com/LibraryAI/NLP/blob/master/about_transformer_self_attention.ipynb)
 - __Multi-headed self attention__
   - __Multiple matrices__
     - Create multiple number of different self attention matrices
@@ -47,6 +48,7 @@ Attention 계열 논문 중 question answering 과 맥락 추측 등 natrual lan
     - Concatenate Z1, Z2, Z3, .. Zn in row. (Z: M by n*T size matrix)
   - __Weight All__
     - Multiply concatenated Z with Weight matrix W of n*T by N, Z × W = Z is back again with M by N size
+  - 자세한 개념과 코드 설명은 [여기](https://github.com/LibraryAI/NLP/blob/master/about_transformer_self_attention.ipynb)
 - __Masked multi-headed self attention__
   - __Masking future time step scores__
     - Self attention의 세번째 step의 softmax를 적용하기 전에 해당 word의 future time step 에 해당하는 word vector들의 score -inf 로 바꿔주기
